@@ -71,7 +71,6 @@ class ExpenseService:
     def total_amount(self) -> float:
         return sum(expense.amount for expense in self._repository.list_all())
 
-
     def total_by_month(self) -> dict[str, float]:
         totals: defaultdict[str, float] = defaultdict(float)
 
